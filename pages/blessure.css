@@ -32,8 +32,8 @@ header {
 
 .text-logo {
   display: flex;
-  flex-direction: column;
-  line-height: 1;
+  flex-direction: column; /* place les éléments verticalement (de haut en bas) */
+  line-height: 1; /* permet de contrôler la distance verticale de premier et secours*/
 }
 
 .logo1 {
@@ -46,11 +46,15 @@ header {
   font-weight: bold;
 }
 
+menu {
+  gap: 70px;
+}
+
 .menu ul {
   display: flex;
   list-style: none;
   gap: 25px;
-  padding: 0;
+  padding: 0px;
   justify-content: flex-end;
   align-items: center;
 }
@@ -60,14 +64,12 @@ header {
   width: 150px;
   height: 40px;
   border-radius: 5px;
-  border: none;
-  color: white;
 }
 
 a {
   text-decoration: none;
   color: rgb(49, 51, 51);
-  cursor: pointer;
+  cursor: pointer, blue;
 }
 
 .small {
@@ -97,55 +99,40 @@ a {
 .cadr {
   display: flex;
   gap: 20px;
-  padding: 20px;
 }
-
 .cadre {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 400px;
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
   margin: 30px;
-  border: 2px solid grey;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.cadre a {
-  display: block;
+.cadre-container {
   width: 100%;
-  height: 100%;
+  height: 180px;
 }
 
-.container1,
-.container2,
-.container3,
-.container4 {
+.cadre-container img {
   width: 100%;
   height: 100%;
+  object-fit: cover; /* ajuste l'image pour remplir le cadre sans déformation */
+}
+
+.cadre:hover {
+  transform: scale(1.03);
+  transition: 0.3s;
+}
+
+.container {
+  width: 100%;
   padding: 10px 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
-}
-
-.container1 i {
-  color: red;
-  font-size: 100px;
-}
-
-.container2 i {
-  color: orange;
-  font-size: 100px;
-}
-
-.container3 i {
-  color: yellow;
-  font-size: 100px;
-}
-
-.container4 i {
-  color: blue;
-  font-size: 100px;
 }
 
 .foot {

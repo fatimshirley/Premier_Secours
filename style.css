@@ -99,9 +99,15 @@ a {
   font-size: 30px;
 }
 
+.fond i{
+  color: red;
+  font-size: 20px;
+  margin: 8px;
+}
+
 .fond button {
   background-color: rgb(168, 20, 20);
-  width: 250px;
+  width: 280px;
   height: 50px;
   border-radius: 15px;
   margin-top: 250px;

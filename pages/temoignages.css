@@ -71,3 +71,60 @@ a {
   color: rgb(49, 51, 51);
   cursor: pointer, blue;
 }
+
+
+
+
+
+.foot {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 40px;
+  background: #635d5d;
+  color: white;
+  text-align: center;
+}
+
+.contain {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2px;
+}
+
+.contain h2 {
+ margin-top: 15px;
+}
+.social a {
+  margin-right: 10px;
+  color: white;
+  font-size: 20px;
+}
+
+.social i{
+  color: rgb(23, 23, 62);
+}
+
+
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 5px 0;
+}
+
+.contact i {
+  width: 25px;       
+  text-align: center;
+  color: rgb(23, 23, 62)  ;
+}
+
+.copyright {
+  text-align: center;
+  padding: 15px;
+  background: #635d5d;
+  color: #aaa;
+}
