@@ -65,6 +65,9 @@ menu {
   width: 150px;
   height: 40px;
   border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  color: rgb(49, 51, 51);
 }
 
 a {
@@ -99,13 +102,15 @@ a {
   font-size: 30px;
 }
 
-.fond i{
+.fond i {
   color: red;
   font-size: 20px;
   margin: 8px;
 }
 
-.fond button {
+.btn-urgence {
+  display: inline-flex;
+  align-items: center;
   background-color: rgb(168, 20, 20);
   width: 280px;
   height: 50px;
@@ -114,6 +119,14 @@ a {
   margin-left: 100px;
   color: white;
   font-size: 20px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-urgence:hover {
+  background-color: red;
+  transform: scale(1.05);
+  transition: 0.3s;
 }
 
 .ensemble-geste {
@@ -188,6 +201,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
 }
 
 .foot {
@@ -210,7 +224,7 @@ a {
 }
 
 .contain h2 {
- margin-top: 15px;
+  margin-top: 15px;
 }
 .social a {
   margin-right: 10px;
@@ -218,10 +232,9 @@ a {
   font-size: 20px;
 }
 
-.social i{
+.social i {
   color: rgb(23, 23, 62);
 }
-
 
 .contact {
   display: flex;
@@ -231,9 +244,40 @@ a {
 }
 
 .contact i {
-  width: 25px;       
+  width: 25px;
   text-align: center;
-  color: rgb(23, 23, 62)  ;
+  color: rgb(23, 23, 62);
+}
+
+.contain input {
+  width: 50%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.contain input:focus {
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.contain button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: rgb(23, 23, 62);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.contain button:hover {
+  background-color: rgb(23, 23, 62);
+  transform: scale(1.05);
 }
 
 .copyright {
