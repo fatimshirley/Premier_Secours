@@ -154,21 +154,25 @@ a {
 .container1 i {
   color: red;
   font-size: 100px;
+  padding: 50px;
 }
 
 .container2 i {
   color: orange;
   font-size: 100px;
+  padding: 50px;
 }
 
 .container3 i {
   color: yellow;
   font-size: 100px;
+  padding: 50px;
 }
 
 .container4 i {
   color: blue;
   font-size: 100px;
+  padding: 50px;
 }
 
 .foot {
@@ -216,9 +220,161 @@ a {
   color: rgb(23, 23, 62);
 }
 
+.contain input {
+  width: 50%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.contain input:focus {
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.contain button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: rgb(23, 23, 62);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.contain button:hover {
+  background-color: rgb(23, 23, 62);
+  transform: scale(1.05);
+}
+
 .copyright {
   text-align: center;
   padding: 15px;
   background: #635d5d;
   color: #aaa;
+}
+
+
+
+
+@media screen and (max-width: 1024px) {
+
+  header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .menu ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .cadr {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .cadre {
+    width: 45%;
+    height: auto;
+  }
+
+  .small span {
+    font-size: 18px;
+    padding: 0 10px;
+  }
+
+  .foot {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .small h2 {
+    font-size: 22px;
+  }
+
+  .small span {
+    font-size: 15px;
+  }
+
+  .search-box {
+    width: 90%;
+  }
+
+  .cadr {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cadre {
+    width: 90%;
+    height: auto;
+  }
+
+  .container1 i,
+  .container2 i,
+  .container3 i,
+  .container4 i {
+    font-size: 60px;
+    padding: 20px;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu li button {
+    width: 100%;
+  }
+
+  .contain input {
+    width: 80%;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+
+  .hero img {
+    width: 60px;
+  }
+
+  .logo1,
+  .logo2 {
+    font-size: 14px;
+  }
+
+  .small h2 {
+    font-size: 18px;
+  }
+
+  .small span {
+    font-size: 13px;
+  }
+
+  .cadre {
+    margin: 10px;
+  }
+
+  .container1 i,
+  .container2 i,
+  .container3 i,
+  .container4 i {
+    font-size: 50px;
+  }
+
+  .foot {
+    padding: 20px;
+  }
 }

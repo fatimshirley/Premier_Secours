@@ -46,15 +46,11 @@ header {
   font-weight: bold;
 }
 
-menu {
-  gap: 70px;
-}
-
 .menu ul {
   display: flex;
   list-style: none;
   gap: 25px;
-  padding: 0px;
+  padding: 0;
   justify-content: flex-end;
   align-items: center;
 }
@@ -64,6 +60,8 @@ menu {
   width: 150px;
   height: 40px;
   border-radius: 5px;
+  border: none;
+  color: white;
 }
 
 a {
@@ -76,6 +74,11 @@ a {
   background-color: rgb(17, 17, 45);
   text-align: center;
   padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 🔥 centre tout */
+  gap: 15px;
 }
 
 .small h2 {
@@ -84,55 +87,88 @@ a {
   color: white;
 }
 
-.small p {
-  font-size: 20px;
-  color: white;
-  max-width: 500px;
-  margin: 10px auto;
-}
-
 .small span {
   font-size: 20px;
   color: white;
+  max-width: 500px;
 }
 
-.cadr {
-  display: flex;
-  gap: 20px;
+.search-box {
+  position: relative;
+  width: 60%;
+  max-width: 500px;
+
 }
-.cadre {
+
+.search-box input {
+  width: 100%;
+  padding: 12px 12px 12px 40px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  height: 45px;
+}
+
+.search-box i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: gray;
+}
+
+
+.emergency-card {
+  display: flex;
+  gap: 20px;                
+  margin: 20px 0;
+  padding: 15px;
+  align-items: flex-start;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+.emergency-card.reverse {
+  flex-direction: row-reverse;
+}
+
+
+.emergency-image img {
+  width: 350px;               
+  height: 400px;          
+  object-fit: cover;  
+margin: 40px;
+}
+
+
+.emergency-text {
+  margin-left: 20px;             
+  margin-right: 20px;
+  margin: 50px;
+  flex: 1;                    
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: 300px;
-  border-radius: 10px;
-  overflow: hidden;
-  margin: 30px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  justify-content: flex-start;
+  padding: 0 10px;            /
 }
 
-.cadre-container {
-  width: 100%;
-  height: 180px;
+.emergency-text h2 {
+  margin: 0 0 10px 0;
+  font-size: 24px;
 }
 
-.cadre-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* ajuste l'image pour remplir le cadre sans déformation */
+.emergency-text h4 {
+  margin: 15px 0 5px 0;
 }
 
-.cadre:hover {
-  transform: scale(1.03);
-  transition: 0.3s;
+.emergency-text p {
+  margin: 5px 0;
 }
 
-.container {
-  width: 100%;
-  padding: 10px 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.emergency-text ul,
+.emergency-text ol {
+  margin: 5px 0 10px 20px;
 }
 
 .foot {
@@ -180,9 +216,160 @@ a {
   color: rgb(23, 23, 62);
 }
 
+.contain input {
+  width: 50%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.contain input:focus {
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.contain button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: rgb(23, 23, 62);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.contain button:hover {
+  background-color: rgb(23, 23, 62);
+  transform: scale(1.05);
+}
+
 .copyright {
   text-align: center;
   padding: 15px;
   background: #635d5d;
   color: #aaa;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+
+  header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .menu ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .emergency-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .emergency-card.reverse {
+    flex-direction: column;
+  }
+
+  .emergency-image img {
+    width: 90%;
+    height: auto;
+    margin: 20px 0;
+  }
+
+  .emergency-text {
+    margin: 20px;
+    padding: 10px;
+  }
+
+  .foot {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .small h2 {
+    font-size: 22px;
+  }
+
+  .small span {
+    font-size: 15px;
+    padding: 0 10px;
+  }
+
+  .search-box {
+    width: 90%;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu li button {
+    width: 100%;
+  }
+
+  .emergency-text h2 {
+    font-size: 20px;
+  }
+
+  .emergency-text ul,
+  .emergency-text ol {
+    margin-left: 15px;
+    text-align: left;
+  }
+
+  .contain input {
+    width: 80%;
+  }
+
+  .foot {
+    text-align: center;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+
+  .hero img {
+    width: 60px;
+  }
+
+  .logo1,
+  .logo2 {
+    font-size: 14px;
+  }
+
+  .small h2 {
+    font-size: 18px;
+  }
+
+  .small span {
+    font-size: 13px;
+  }
+
+  .emergency-text {
+    margin: 10px;
+  }
+
+  .emergency-image img {
+    width: 100%;
+  }
+
+  .foot {
+    padding: 20px;
+  }
 }

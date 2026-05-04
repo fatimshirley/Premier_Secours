@@ -32,8 +32,8 @@ header {
 
 .text-logo {
   display: flex;
-  flex-direction: column; /* place les éléments verticalement (de haut en bas) */
-  line-height: 1; /* permet de contrôler la distance verticale de premier et secours*/
+  flex-direction: column;
+  line-height: 1;
 }
 
 .logo1 {
@@ -46,15 +46,11 @@ header {
   font-weight: bold;
 }
 
-menu {
-  gap: 70px;
-}
-
 .menu ul {
   display: flex;
   list-style: none;
   gap: 25px;
-  padding: 0px;
+  padding: 0;
   justify-content: flex-end;
   align-items: center;
 }
@@ -64,13 +60,16 @@ menu {
   width: 150px;
   height: 40px;
   border-radius: 5px;
+  border: none;
+  color: white;
 }
 
 a {
   text-decoration: none;
   color: rgb(49, 51, 51);
-  cursor: pointer, blue;
+  cursor: pointer;
 }
+
 
 .fond {
   position: relative;
@@ -95,27 +94,28 @@ a {
 }
 
 .small {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  align-items: center;
-  gap: 20px;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%); 
+    display: flex;
+    align-items: center; 
+    gap: 30px; 
 }
 
 .small img {
-  width: 70%;
-  border-radius: 5px;
-  max-width: 300px;
-  height: auto;
+    width: 350px; 
+    max-width: none;
+    border-radius: 10px;
+    height: auto;
 }
 
 .small p {
-  font-size: 40px;
-  font-weight: bold;
-  color: white;
-  max-width: 500px;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    max-width: 500px;
+    text-align: left; 
 }
 
 .cadr {
@@ -141,7 +141,7 @@ a {
 .cadre-container img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* ajuste l'image pour remplir le cadre sans déformation */
+  object-fit: cover; 
 }
 
 .cadre:hover {
@@ -178,7 +178,7 @@ a {
 }
 
 .contain h2 {
- margin-top: 15px;
+  margin-top: 15px;
 }
 .social a {
   margin-right: 10px;
@@ -186,10 +186,9 @@ a {
   font-size: 20px;
 }
 
-.social i{
+.social i {
   color: rgb(23, 23, 62);
 }
-
 
 .contact {
   display: flex;
@@ -199,9 +198,40 @@ a {
 }
 
 .contact i {
-  width: 25px;       
+  width: 25px;
   text-align: center;
-  color: rgb(23, 23, 62)  ;
+  color: rgb(23, 23, 62);
+}
+
+.contain input {
+  width: 50%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.contain input:focus {
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.contain button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: rgb(23, 23, 62);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.contain button:hover {
+  background-color: rgb(23, 23, 62);
+  transform: scale(1.05);
 }
 
 .copyright {
@@ -209,4 +239,119 @@ a {
   padding: 15px;
   background: #635d5d;
   color: #aaa;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+
+  header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .menu ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .fond img {
+    width: 95%;
+    margin: 30px auto;
+  }
+
+  .small {
+    position: static;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .small p {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .cadr {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .cadre {
+    width: 45%;
+  }
+
+  .foot {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .fond img {
+    margin: 20px auto;
+  }
+
+  .small p {
+    font-size: 18px;
+  }
+
+  .small img {
+    width: 80%;
+  }
+
+  .cadr {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cadre {
+    width: 90%;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu li button {
+    width: 100%;
+  }
+
+  .contain input {
+    width: 80%;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+
+  .hero img {
+    width: 60px;
+  }
+
+  .logo1,
+  .logo2 {
+    font-size: 14px;
+  }
+
+  .small p {
+    font-size: 16px;
+  }
+
+  .small img {
+    width: 100%;
+  }
+
+  .cadre {
+    height: auto;
+  }
+
+  .foot {
+    padding: 20px;
+  }
 }

@@ -1,47 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="formations.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Témoignages</title>
+  <link rel="stylesheet" href="temoignages.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
-     <header>
-      <div class="head">
-        <div class="hero">
-          <img src="./images/logo.jpeg" alt="logo" />
-        </div>
 
-        <div class="text-logo">
-          <div class="logo1">PREMIER</div>
-          <div class="logo2">SECOURS</div>
-        </div>
+<header>
+  <div class="head">
+    <div class="hero">
+      <img src="./images/logo.jpeg" alt="logo" />
+    </div>
+
+    <div class="text-logo">
+      <div class="logo1">PREMIER</div>
+      <div class="logo2">SECOURS</div>
+    </div>
+  </div>
+
+  <div class="menu">
+    <ul>
+      <li><a href="../index.html">Accueil</a></li>
+      <li><a href="conseils.html">Conseils</a></li>
+      <li><a href="formations.html">Formations</a></li>
+      <li><a href="temoignages.html">Temoignages</a></li>
+      <li class="sauveteur">
+        <a href="inscription.html">
+          <button>Devenir Sauveteur</button>
+        </a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<!-- TITRE -->
+<section class="hero-text">
+  <h1>Ils ont appris, compris et réagi</h1>
+  <p>
+    Découvrez comment les gestes de premiers secours peuvent faire la différence
+    dans des situations réelles.
+  </p>
+</section>
+
+
+<section class="temoignages">
+  <div class="temoignage-box">
+
+    <div class="temoignage">
+      <div class="img-circle">
+        <img src="../images/tof1.jpeg">
       </div>
+      <h4>Awa K.</h4>
+      <p>Grâce aux conseils du site, j'ai su quoi faire lorsqu'une personne s'est évanouie devant moi.</p>
+    </div>
 
-      <div class="menu">
-        <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="conseils.html">Conseils</a></li>
-          <li><a href="formations.html">Formations</a></li>
-          <li><a href="temoignages.html">Temoignages</a></li>
-          <div class="sauveteur">
-            <li>
-              <a href="inscription.html">
-                <button>Devenir Sauveteur</button>
-              </a>
-            </li>
-          </div>
-        </ul>
+    <div class="temoignage">
+      <div class="img-circle">
+        <img src="../images/tof2.jpeg">
       </div>
-    </header>
+      <h4>Yao M.</h4>
+      <p>Les explications sont simples et rapides à comprendre, surtout en situation d'urgence.</p>
+    </div>
+
+    <div class="temoignage">
+      <div class="img-circle">
+        <img src="../images/tof3.jpeg">
+      </div>
+      <h4>Fatou B.</h4>
+      <p>J'ai appris les premiers gestes pour un étouffement et cela m'a beaucoup rassurée.</p>
+    </div>
+
+  </div>
+</section>
 
 
+<section class="situations">
+  <h2>Situations vécues</h2>
+  <h3>Des gestes simples qui comptent</h3>
 
+  <div class="situations-container">
+    <div class="situation">
+      <p><strong>Situation</strong></p>
+      <p>Une personne a fait un malaise.</p>
+      <p><strong>Résultat</strong></p>
+      <p>Les gestes appris ont permis de la maintenir en sécurité avant les secours.</p>
+    </div>
 
+    <div class="situation">
+      <p><strong>Situation</strong></p>
+      <p>Un enfant s'étouffait pendant un repas.</p>
+      <p><strong>Résultat</strong></p>
+      <p>Une réaction rapide a permis de libérer sa respiration.</p>
+    </div>
+  </div>
+</section>
 
-    <footer>
+<section class="stats">
+  <h2>Statistiques</h2>
+
+  <div class="stats-container">
+
+    <div class="stat-box">
+      <h3>95%</h3>
+      <p>des utilisateurs se sentent plus confiants après apprentissage</p>
+    </div>
+
+    <div class="stat-box">
+      <h3>+1 200</h3>
+      <p>personnes formées aux gestes de premiers secours</p>
+    </div>
+
+    <div class="stat-box">
+      <h3>80%</h3>
+      <p>des urgences peuvent être stabilisées avant les secours</p>
+    </div>
+
+    <div class="stat-box">
+      <h3>3 min</h3>
+      <p>pour apprendre un geste essentiel qui peut sauver une vie</p>
+    </div>
+
+  </div>
+
+  <p class="bottom-text">
+    Chaque geste appris aujourd'hui peut sauver une vie demain.
+  </p>
+</section>
+
+<footer>
       <div class="foot">
         <div class="contain">
           <h2>A propos</h2>
@@ -93,6 +183,5 @@
         &copy; 2026 Premier Secours. Tous droits réservés.
       </p>
     </footer>
-
 </body>
 </html>
